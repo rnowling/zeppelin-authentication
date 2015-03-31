@@ -10,6 +10,7 @@ EXPOSE 8081
 
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD run.sh run.sh
+ADD htpasswd /etc/nginx/.htpasswd
 
 CMD bash run.sh
 
