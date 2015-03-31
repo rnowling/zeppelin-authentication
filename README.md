@@ -26,9 +26,9 @@ Run Docker Containers
 ---------------------
 
 	$ docker run -d --name zeppelin rnowling/zeppelin
-	$ docker run -d --name nginx --link zeppelin:zeppelin -p 8080:8080 -p 8081:8081 rnowling/nginx
+	$ docker run -d --name nginx --link zeppelin:zeppelin -p 8080:8080 -p 8081:8081 -v /local/notebook/path:/zeppelin/notebook rnowling/nginx
 
-Now, point your browser to http://localhost:8080/
+Now, point your browser to [http://localhost:8080/]
 
 Known Issues
 ------------
