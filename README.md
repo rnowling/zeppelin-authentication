@@ -22,6 +22,7 @@ Each instance of Zeppelin will need its own ports.  The default ports are 8080 a
 2. Update the exposed ports in `zeppelin_docker/Dockerfile`
 3. Update the exposed ports in `nginx_docker/Dockerfile`
 4. Update the ports in `nginx_docker/nginx.conf`
+5. Update `ZEPPELIN_PORT_8080_TCP_ADDR` in `nginx_docker/run.sh`
 
 Note that the ports must all agree.
 
