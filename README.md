@@ -14,6 +14,17 @@ Update Zeppelin Environment File
 --------------------------------
 If you need to change the Zeppelin environment file (say to point it at a cluster), modify `zeppelin_docker/zeppelin-env.sh` before building the containers.
 
+Change Ports
+------------
+Each instance of Zeppelin will need its own ports.  The default ports are 8080 and 8081.  If you want to use different ports, you will need to:
+
+1. Update `zeppelin_docker/zeppelin-site.xml`
+2. Update the exposed ports in `zeppelin_docker/Dockerfile`
+3. Update the exposed ports in `nginx_docker/Dockerfile`
+4. Update the ports in `nginx_docker/nginx.conf`
+
+Note that the ports must all agree.
+
 Build Docker Containers
 -----------------------
 

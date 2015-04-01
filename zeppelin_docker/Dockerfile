@@ -11,6 +11,8 @@ RUN git clone https://github.com/apache/incubator-zeppelin /zeppelin
 
 WORKDIR /zeppelin
 RUN mvn -DskipTests -Pspark-1.3 -Phadoop-2.4 clean package
+ADD zeppelin-env.sh /zeppelin/conf/zeppelin-env.sh
+ADD zeppelin-site.xml /zeppelin/conf/zeppelin-site.xml
 
 EXPOSE 8080
 EXPOSE 8081
